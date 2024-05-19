@@ -3,4 +3,10 @@
     <string name="title_location_permission">loc1</string>
     <string name="text_location_permission">loc2</string>
     <string name="ok">ok</string>
+
+    <string name="select">Categories</string>
+    <string name="johndevens">\u0040 johndevens</string>
+    <string name="sallysmith">\u0040 sallysmith</string>
+    <string name="willsimmons">\u0040 willsimmons</string>
+    <string name="jackevens">\u0040 jackevens</string>
 </resources>

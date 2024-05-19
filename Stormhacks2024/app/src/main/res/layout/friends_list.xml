@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".FriendsListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:textColor="#1D422F">
+
+        <ImageButton
+            android:id="@+id/clickBack"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="10dp"
+            android:layout_gravity="right"
+            android:onClick="clickedBack"
+            android:src="@drawable/backbutton"
+            android:background="@null"
+            android:scaleType="fitCenter"/>
+        <ImageButton
+            android:id="@+id/profilepic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:layout_marginRight="80dp"
+            android:layout_weight="2"
+            android:onClick="profilepicked"
+            android:src="@drawable/profile"
+            android:background="@null"
+            android:scaleType="fitCenter"/>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/rounded_grey"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/clickSearch"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:paddingTop="5dp"
+                android:layout_marginRight="5dp"
+                android:onClick="clickedSearch"
+                android:src="@drawable/searchicon"
+                android:background="@null"
+                android:scaleType="fitCenter"/>
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Search Friends"
+                android:background="@null"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:padding="10dp"
+            android:background="@drawable/rounded_corner"
+            android:textColor="#FFFFFF"
+            android:radius="30dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/inviteFriendsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Invite Friends to Frames"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/invitelinkTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="https://fram.es/joannadove"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/clickShare"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedShare"
+                    android:src="@drawable/shareicon"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pplumayknowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="People You May Know "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/johndoeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="John Doe"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/atjohndoeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/johndevens"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clickAdd1"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:text="Add"
+                    android:onClick="clickedAdd1"
+                    android:scaleType="fitCenter"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_style"/>
+
+                <ImageButton
+                    android:id="@+id/clickX1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedX1"
+                    android:src="@drawable/xshape"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sallysmithTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Sally Smith"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/atsallysmithTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/sallysmith"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clickAdd2"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:text="Add"
+                    android:onClick="clickedAdd2"
+                    android:scaleType="fitCenter"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_style"/>
+
+                <ImageButton
+                    android:id="@+id/clickX2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedX2"
+                    android:src="@drawable/xshape"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/willsimmonsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Will Simmons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/atwillsimmonsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/willsimmons"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clickAdd3"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:text="Add"
+                    android:onClick="clickedAdd3"
+                    android:scaleType="fitCenter"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_style"/>
+
+                <ImageButton
+                    android:id="@+id/clickX3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedX3"
+                    android:src="@drawable/xshape"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/friendrequestsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Friend Requests"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/jackevensTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Jack Evens"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/atjackevensTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/jackevens"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clickAccept"
+                    android:layout_width="95dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:text="Accept"
+                    android:onClick="clickedAccept"
+                    android:scaleType="fitCenter"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/button_style"/>
+
+                <ImageButton
+                    android:id="@+id/clickX4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedX4"
+                    android:src="@drawable/xshape"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="My Friends"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".1"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="Will Simmons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/willsimmons"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/clickFollow"
+                    android:layout_width="125dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:text="Following"
+                    android:onClick="clickedFollowing"
+                    android:scaleType="fitCenter"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:background="@drawable/button_style2"/>
+                <ImageButton
+                    android:id="@+id/clickMore"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="right"
+                    android:onClick="clickedMore"
+                    android:src="@drawable/threedots"
+                    android:background="@null"
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
